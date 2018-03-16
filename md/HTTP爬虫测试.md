@@ -19,7 +19,7 @@ cheerio类似于jQuery那样对所获取的html代码进行处理
 
 ## 结果展示
 
-
+[content目录下](https://github.com/lovemoganna/Nodejs/blob/master/jianshu/content/content.txt)
 ## 参考资料
 
 [起源版本](https://www.cnblogs.com/woodk/p/6147436.html)
