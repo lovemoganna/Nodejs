@@ -29,7 +29,7 @@ request.get(targetUrl)
                     '标签' : $(element).find('.collection-tag').text(),
                     '关注数' :  +$(element).find('.ic-list-comments').parent().text(),
                     '阅读数' : +$(element).find('.ic-list-read').parent().text(),
-                    '推荐数' : +($(element).find('.ic-list-comments').parent().text()) * 1//JS规范
+                    '打赏金额' : +($(element).find('.ic-list-money').parent().text()) * 1//JS规范
                 }
                 content += JSON.stringify(temp)+"\n";
                 //图片地址
