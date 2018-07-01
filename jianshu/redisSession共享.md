@@ -1,7 +1,0 @@
-第二种 是自定义会话管理的工具类，这样的话灵活性很大，可以根据自身需求来实现，但是需要额外的开发时间
-
-第三种是使用框架的会话管理工具，例如spring-session，shiro等，可以理解是替换了servlet那一套会话管理，不依赖容器，不用改动代码。如果采用spring-session的话，使用的是spring-data-redis那一套连接池，prefect，不过前提是你得用spring框架。至于shiro，那是一个十分成熟，强大易用的安全框架，学习成本比spring-session来的要多一些。
-
-下面我们介绍一下第二种方式的实现
-
-要注意的是为什么前端用ajax的方式登录，因为把模拟的session信息用存到redis后，需要在本地存入userId和token来作为用户的标识，通过这个标识去redis里验证该用户是否登录，从而获取redis中的用户登录信息，但是分布式中多个系统对应多个domain，所以login模块生成的userId和token要想每个系统都用，必须每个系统都生成自己的cookie信息，java端无法为每个系统生成一份cookie所以只能在前端用iframe的方式为每个系统生成一份cookie
